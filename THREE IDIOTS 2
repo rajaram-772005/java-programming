@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner obj=new Scanner (System.in);
+        int a1=obj.nextInt();
+        int b1=obj.nextInt();
+        int a2=obj.nextInt();
+        int b2=obj.nextInt();
+        
+        float midx=(float)(a1+a2)/2;
+        float midy=(float)(b1+b2)/2;
+        System.out.printf("Binoy's house is located at (%.1f,%.1f)", midx, midy);
+        
+    }
+}
