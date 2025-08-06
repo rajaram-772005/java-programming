@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args)
+    {
+        Scanner obj = new Scanner(System.in);
+        int num = obj.nextInt();
+
+        int firstnum = num / 10;
+        int secondnum = num % 10;
+
+        int sum = firstnum + secondnum;
+
+        System.out.println("Bird said:" + num );
+        System.out.println("Alice must go in path-" + sum);
+       
+    }
+}
