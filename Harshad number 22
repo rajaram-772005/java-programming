@@ -1,0 +1,30 @@
+import java.util.*;
+import java.util.Scanner; 
+
+public class Solution
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in); 
+        int num = sc.nextInt();
+
+        int original = num;
+        int sumOfDigits = 0;
+
+        while (num > 0) 
+        { 
+            int remainder = num % 10; 
+            sumOfDigits += remainder;
+            num /= 10; 
+        }
+
+        if (original % sumOfDigits == 0)
+        { 
+            System.out.println("Harshad Number"); 
+        } 
+        else
+        {
+            System.out.println("Not Harshad Number");
+        }
+    }
+}
