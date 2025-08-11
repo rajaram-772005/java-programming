@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class solution{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+
+        int n = obj.nextInt();
+
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = obj.nextInt();
+        }
+
+        int key = obj.nextInt();
+
+        boolean found = false;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == key) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            System.out.println(key + " is presented in an array.");
+        } else {
+            System.out.println(key + " is not presented in an array.");
+        }
+
+    }
+}
