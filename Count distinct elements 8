@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < n; i++) {
+            int num = scanner.nextInt();
+            set.add(num);
+        }
+        int distinctCount = set.size();
+        if (distinctCount == 1) {
+            System.out.println("There are 1 distinct element in the array.");
+        } else {
+            System.out.println("There are " + distinctCount + " distinct elements in the array.");
+        }
+        
+    }
+}
