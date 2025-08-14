@@ -1,0 +1,24 @@
+import java.util.Scanner; 
+
+public class Solution {
+    public static int calculateSum(int n) {
+        if (n == 1) { 
+            return 1;
+        } else {
+            return n + calculateSum(n - 1); 
+        }
+    }
+
+    public static void main(String[] args) { 
+        Scanner scn = new Scanner(System.in); 
+        int n = scn.nextInt();
+
+        if (n >= 1 && n <= 50) { 
+            int sum = calculateSum(n); 
+            String formattedSum = String.format("%04d", sum); 
+            System.out.println("The sum of numbers from 1 to " + n + " : " + formattedSum); 
+        } else {
+            System.out.println("Enter a Valid Input!!!!!!!!!!!!!!!!!!"); 
+        }
+    }
+}
