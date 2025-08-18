@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        scanner.close();
+
+        int digitCount = countDigitsRecursive(number);
+        System.out.println("The Count the digits: " + digitCount);
+    }
+
+    public static int countDigitsRecursive(int n) {
+        if (n == 0) {
+            return 1; 
+        }
+        if (n / 10 == 0) { 
+            return 1;
+        } else {
+            return 1 + countDigitsRecursive(n / 10);
+        }
+    }
+}
