@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static boolean isArmstrong(int num) {
+        if (num < 0 || num >= 100000) {
+            System.out.println("Invalid Input");
+            return false;
+        }
+
+        int originalNumber = num;
+        int sum = 0; 
+        int digits = String.valueOf(num).length(); 
+
+        while (num > 0) {
+            int digit = num % 10; 
+            sum += Math.pow(digit, digits);
+            num /= 10; 
+        }
+
+        return sum == originalNumber; 
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int inputNumber = scanner.nextInt();
+
+        if (isArmstrong(inputNumber)) {
+            System.out.println("yes");
+        } else if (inputNumber >= 0 && inputNumber < 100000){ 
+            System.out.println("no");
+        }
+    }
+}
